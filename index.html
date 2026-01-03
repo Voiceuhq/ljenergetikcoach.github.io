@@ -1,0 +1,2215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Énergie & Transformation — Reiki • Theta Healing • Coaching</title>
+
+<!-- SEO -->
+<meta name="description" content="Reiki, Theta Healing et coaching de vie pour libérer les blocages, apaiser le mental et créer une vie alignée. Séances individuelles, initiations et ateliers.">
+<meta name="keywords" content="Reiki, Theta Healing, Coaching de vie, Energie, Bien-être, Guérison, Développement personnel">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Énergie & Transformation">
+<meta property="og:description" content="Accompagnement énergétique et transformation intérieure — apaisement, clarté et alignement.">
+<meta property="og:image" content="image-de-partage.jpg">
+
+<link rel="canonical" href="https://tonsite.com">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Énergie & Transformation",
+  "description": "Reiki, Theta Healing et coaching de vie pour transformation intérieure.",
+  "priceRange": "€€",
+  "areaServed": "France",
+  "url": "https://tonsite.com"
+}
+</script>
+
+<style>
+:root{
+  --green: #9bc6a0;
+  --green-dark: #7aa87f;
+  --gold: #d4c19c;
+  --soft-green: #e8f5e8;
+  --text: #2b2b2b;
+  --text-light: #5a5a5a;
+  --card: #ffffff;
+  --shadow: rgba(107, 191, 130, 0.08);
+  --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+*{ 
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: var(--soft-green);
+  line-height:1.75;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-text-size-adjust: 100%;
+  padding-top: 90px;
+}
+
+/* Effet de particules subtiles en arrière-plan */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(155, 198, 160, 0.03) 0%, transparent 20%),
+    radial-gradient(circle at 85% 30%, rgba(212, 193, 156, 0.03) 0%, transparent 20%),
+    radial-gradient(circle at 50% 80%, rgba(155, 198, 160, 0.03) 0%, transparent 20%);
+  z-index: -1;
+}
+
+/* HEADER FIXED - CORRIGÉ */
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(155, 198, 160, 0.2);
+  box-shadow: 0 4px 20px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.header-left{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-space{
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green), var(--gold));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(155, 198, 160, 0.3);
+  overflow: hidden;
+  border: 2px solid white;
+  flex-shrink: 0;
+}
+
+.logo-space img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo{
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 1.3rem;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
+/* MENU HAMBURGER POUR MOBILE */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text);
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.menu-toggle:hover {
+  background: rgba(155, 198, 160, 0.1);
+}
+
+nav {
+  display: flex;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+nav a{
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: var(--transition);
+  position: relative;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+}
+
+nav a:hover{
+  color: var(--green-dark);
+  background: rgba(155, 198, 160, 0.15);
+  transform: translateY(-2px);
+}
+
+nav a.active {
+  color: var(--green-dark);
+  background: rgba(155, 198, 160, 0.1);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  nav {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    border-bottom: 1px solid rgba(155, 198, 160, 0.2);
+  }
+  
+  nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  nav a {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin: 2px 0;
+  }
+}
+
+@media (min-width: 769px) {
+  header{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1100px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px var(--shadow);
+    flex-direction: row;
+    padding: 16px 30px;
+  }
+  
+  .header-container {
+    flex-direction: row;
+  }
+  
+  nav {
+    gap: 10px;
+  }
+  
+  nav a{
+    font-size: 0.95rem;
+    padding: 8px 20px;
+    background: transparent;
+  }
+}
+
+header.scrolled {
+  top: 10px;
+  width: 95%;
+  padding: 12px 25px;
+  box-shadow: 0 4px 20px rgba(107, 191, 130, 0.1);
+}
+
+@media (max-width: 768px) {
+  header.scrolled {
+    top: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+/* HERO SECTION */
+.hero {
+  padding: 40px 16px 60px !important;
+  text-align: center;
+  position: relative;
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text);
+  line-height: 1.3;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  max-width: 100%;
+  margin: 0 auto 30px;
+  padding: 0 10px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out 0.3s forwards;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out 0.6s forwards;
+}
+
+.hero-buttons .cta {
+  width: 100%;
+  max-width: 280px;
+  justify-content: center;
+  padding: 14px 24px;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 80px 22px 120px !important;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+  }
+  
+  .hero-buttons {
+    flex-direction: row;
+    gap: 15px;
+  }
+  
+  .hero-buttons .cta {
+    width: auto;
+    max-width: none;
+  }
+}
+
+/* SECTIONS */
+section{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 16px;
+  width: 100%;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--text);
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, var(--green), var(--gold));
+  border-radius: 3px;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 30px;
+  max-width: 100%;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  section{
+    padding: 120px 22px;
+  }
+  
+  .section-title {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .section-title::after {
+    bottom: -8px;
+    width: 60px;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    max-width: 600px;
+  }
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  @keyframes expandWidth {
+    from {
+      width: 0;
+    }
+    to {
+      width: 60px;
+    }
+  }
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0); 
+  }
+  50% { 
+    transform: translateY(-15px); 
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* BLOCK */
+.block{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.block.reverse > div:first-child {
+  order: 2;
+}
+
+.block.reverse > .portrait-frame {
+  order: 1;
+}
+
+.portrait-frame {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  transition: var(--transition);
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.portrait-frame.animated {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.portrait-frame:hover {
+  transform: scale(1.02) translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 1/1;
+}
+
+.block-text {
+  width: 100%;
+}
+
+.quote-frame {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(155, 198, 160, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.quote-frame.animated {
+  animation: fadeInUp 1s ease-out 0.2s forwards;
+}
+
+.quote-frame p {
+  font-style: italic;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.experience-frame {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid rgba(155, 198, 160, 0.2);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.experience-frame.animated {
+  animation: fadeInUp 1s ease-out 0.4s forwards;
+}
+
+.experience-frame div:first-child {
+  font-size: 1.8rem;
+  color: var(--green);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.experience-frame div:last-child {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.block-text p:not(.quote-frame p) {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.block-text p:not(.quote-frame p).animated {
+  animation: fadeInUp 1s ease-out 0.6s forwards;
+}
+
+.block-text p:not(.quote-frame p):nth-of-type(2).animated {
+  animation-delay: 0.8s;
+}
+
+@media (min-width: 768px) {
+  .block{
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 60px;
+  }
+  
+  .block.reverse {
+    grid-template-columns: .9fr 1.1fr;
+  }
+  
+  .block.reverse > div:first-child {
+    order: 2;
+  }
+  
+  .block.reverse > .portrait-frame {
+    order: 1;
+  }
+  
+  .portrait-frame {
+    max-width: none;
+  }
+  
+  .quote-frame {
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .quote-frame p {
+    font-size: 1.1rem;
+  }
+  
+  .experience-frame {
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  .experience-frame div:first-child {
+    font-size: 2rem;
+  }
+}
+
+/* CARDS */
+.prices{
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+  grid-template-columns: 1fr;
+}
+
+.card{
+  border: 1px solid rgba(155, 198, 160, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+  background: var(--card);
+  margin-bottom: 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.card.animated {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.card:nth-child(1).animated {
+  animation-delay: 0.2s;
+}
+
+.card:nth-child(2).animated {
+  animation-delay: 0.4s;
+}
+
+.card:nth-child(3).animated {
+  animation-delay: 0.6s;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--green), var(--gold));
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover::before {
+  width: 8px;
+}
+
+.card-icon {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--green);
+  transition: var(--transition);
+}
+
+.card:hover .card-icon {
+  transform: scale(1.1);
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.card small {
+  display: block;
+  padding-top: 15px;
+  border-top: 1px solid rgba(155, 198, 160, 0.2);
+  color: var(--text-light);
+  font-size: 0.85rem;
+}
+
+.card small i {
+  margin-right: 5px;
+}
+
+@media (min-width: 600px) {
+  .prices{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .prices{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+  }
+  
+  .card{
+    padding: 28px;
+    border-radius: 20px;
+  }
+  
+  .card-icon {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+  
+  .card p {
+    font-size: 0.98rem;
+  }
+}
+
+/* PRICE CARDS */
+.price-card {
+  text-align: center;
+  padding: 25px 20px;
+  border: 1px solid rgba(155, 198, 160, 0.2);
+  border-radius: 15px;
+  background: var(--card);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.price-card.animated {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.price-card:nth-child(1).animated {
+  animation-delay: 0.2s;
+}
+
+.price-card:nth-child(2).animated {
+  animation-delay: 0.4s;
+}
+
+.price-card:nth-child(3).animated {
+  animation-delay: 0.6s;
+}
+
+.price-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--green), var(--gold));
+  transition: var(--transition);
+}
+
+.price-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.price-card:hover::before {
+  width: 8px;
+}
+
+.price-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: var(--text);
+  font-family: 'Playfair Display', serif;
+}
+
+.price-card > p {
+  color: var(--text-light);
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.price-features {
+  list-style: none;
+  margin: 20px 0;
+  text-align: left;
+  flex-grow: 1;
+}
+
+.price-features li {
+  padding: 8px 0;
+  color: var(--text-light);
+  position: relative;
+  padding-left: 25px;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.price-features li:hover {
+  color: var(--green-dark);
+  transform: translateX(5px);
+}
+
+.price-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.price-features li:hover::before {
+  transform: scale(1.2);
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--green-dark);
+  margin: 15px 0 25px 0;
+  transition: var(--transition);
+}
+
+.price-card:hover .price {
+  transform: scale(1.05);
+}
+
+.price span {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: normal;
+}
+
+.formula-cta {
+  background: white;
+  color: var(--green-dark);
+  border: 2px solid var(--green);
+  padding: 14px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: auto;
+  transition: var(--transition);
+  width: 100%;
+  font-size: 0.95rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.formula-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
+  opacity: 0;
+  z-index: -1;
+  transition: var(--transition);
+}
+
+.formula-cta:hover {
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(155, 198, 160, 0.3);
+}
+
+.formula-cta:hover::before {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .price-card {
+    padding: 35px 25px;
+    border-radius: 20px;
+  }
+  
+  .price-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .price-features li {
+    font-size: 1rem;
+  }
+  
+  .price {
+    font-size: 2.2rem;
+    margin: 20px 0 40px 0;
+  }
+  
+  .formula-cta {
+    padding: 16px 36px;
+    width: auto;
+  }
+}
+
+/* CONTACT */
+.contact-grid{
+  display: grid;
+  gap: 20px;
+  margin-top: 30px;
+  grid-template-columns: 1fr;
+}
+
+.contact-item{
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  padding: 20px;
+  border: 1px solid rgba(155, 198, 160, 0.2);
+  border-radius: 15px;
+  background: var(--card);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+  transition: var(--transition);
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.contact-item.animated {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.contact-item:nth-child(1).animated {
+  animation-delay: 0.2s;
+}
+
+.contact-item:nth-child(2).animated {
+  animation-delay: 0.4s;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.contact-emoji{ 
+  font-size: 1.8rem;
+  width: 50px;
+  height: 50px;
+  background: rgba(155, 198, 160, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: var(--transition);
+}
+
+.contact-item:hover .contact-emoji {
+  background: var(--green);
+  color: white;
+  transform: scale(1.1);
+}
+
+.contact-item strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.contact-item div:last-child {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.contact-item small {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.contact-form {
+  margin-top: 40px;
+  background: var(--card);
+  border-radius: 15px;
+  padding: 25px 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.contact-form.animated {
+  animation: fadeInUp 1s ease-out 0.6s forwards;
+}
+
+.contact-form h3 {
+  margin-bottom: 25px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--text);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(155, 198, 160, 0.3);
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  transition: var(--transition);
+  background: #f9fbf8;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(155, 198, 160, 0.2);
+  transform: translateY(-2px);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .contact-grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .contact-item{
+    padding: 30px;
+    border-radius: 20px;
+  }
+  
+  .contact-emoji{
+    font-size: 2.2rem;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .contact-form {
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 50px;
+  }
+  
+  .contact-form h3 {
+    font-size: 1.8rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* CTA */
+.cta{
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
+  padding: 14px 28px;
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  box-shadow: 0 6px 15px rgba(155, 198, 160, 0.3);
+  transition: var(--transition);
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-size: 0.95rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--green-dark), var(--green));
+  opacity: 0;
+  z-index: -1;
+  transition: var(--transition);
+}
+
+.cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(155, 198, 160, 0.4);
+}
+
+.cta:hover::before {
+  opacity: 1;
+}
+
+.cta-outline {
+  background: transparent;
+  color: var(--green-dark);
+  border: 2px solid var(--green);
+  box-shadow: none;
+}
+
+.cta-outline:hover {
+  background: rgba(155, 198, 160, 0.08);
+}
+
+@media (min-width: 768px) {
+  .cta{
+    padding: 16px 36px;
+    width: auto;
+    max-width: none;
+  }
+}
+
+/* FOOTER */
+footer{
+  padding: 40px 16px 20px;
+  background: #f1f5f0;
+  text-align: center;
+  color: #666;
+  margin-top: 60px;
+  position: relative;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.footer-col h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--text);
+}
+
+.footer-col p {
+  color: var(--text-light);
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: var(--transition);
+  cursor: pointer;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--green);
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--green-dark);
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(155, 198, 160, 0.1);
+  border-radius: 50%;
+  color: var(--green-dark);
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  background: var(--green);
+  color: white;
+  transform: translateY(-3px) rotate(5deg);
+}
+
+.copyright {
+  padding-top: 20px;
+  border-top: 1px solid rgba(155, 198, 160, 0.2);
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+@media (min-width: 768px) {
+  footer{
+    padding: 60px 20px 30px;
+    margin-top: 80px;
+  }
+  
+  .footer-content {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: left;
+  }
+  
+  .footer-col h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  
+  .social-links {
+    justify-content: flex-start;
+  }
+}
+
+/* BACK TO TOP */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  background: var(--green);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(155, 198, 160, 0.3);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background: var(--green-dark);
+  transform: translateY(-5px) rotate(360deg);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 25px 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 92%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: var(--transition);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.close-modal:hover {
+  color: var(--green-dark);
+  background: rgba(155, 198, 160, 0.1);
+  transform: rotate(90deg);
+}
+
+.modal h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--text);
+}
+
+.modal p {
+  color: var(--text-light);
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .modal-content {
+    padding: 40px;
+    border-radius: 20px;
+  }
+  
+  .modal h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+}
+
+/* CORRECTION POUR IOS */
+@supports (-webkit-touch-callout: none) {
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+}
+
+/* TOUCH DEVICE OPTIMIZATIONS */
+@media (hover: none) and (pointer: coarse) {
+  .card:active,
+  .price-card:active,
+  .contact-item:active {
+    transform: translateY(-5px);
+  }
+  
+  .cta:active,
+  .formula-cta:active {
+    transform: scale(0.98);
+  }
+  
+  nav a:active {
+    background: rgba(155, 198, 160, 0.15);
+    transform: translateY(-2px);
+  }
+  
+  /* Empêcher le zoom sur les inputs iOS */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* LOADER POUR LE FORMULAIRE */
+.form-loader {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 3000;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-loader.show {
+  display: flex;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(155, 198, 160, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--green);
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ANIMATION DES SECTIONS */
+.section-title,
+.section-subtitle {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.section-title.animated {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.section-subtitle.animated {
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-container">
+    <div class="header-left">
+      <div class="logo-space">
+        <img src="logo.png" alt="Logo Énergie & Transformation">
+      </div>
+      <div class="logo">Énergie & <span>Transformation</span></div>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <nav id="mainNav">
+      <a href="#accueil" class="active">Accueil</a>
+      <a href="#qui">Qui suis-je</a>
+      <a href="#techniques">Techniques</a>
+      <a href="#formules">Formules</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Loader pour formulaire -->
+<div class="form-loader" id="formLoader">
+  <div class="spinner"></div>
+  <p>Envoi en cours...</p>
+</div>
+
+<!-- Hero Section -->
+<section id="accueil" class="hero">
+  <div class="hero-content">
+    <h1>Un chemin de transformation intérieure</h1>
+    <p>
+      À travers le Reiki, le Theta Healing et le coaching de vie,
+      je t'accompagne pour libérer les blocages, apaiser le mental
+      et retrouver un chemin plus clair, aligné et serein.
+    </p>
+    <div class="hero-buttons">
+      <a href="#formules" class="cta">Commencer le voyage <i class="fas fa-sparkles"></i></a>
+      <a href="#contact" class="cta cta-outline">Prendre rendez-vous</a>
+    </div>
+  </div>
+</section>
+
+<!-- QUI SUIS-JE -->
+<section id="qui">
+  <h2 class="section-title">Qui suis-je</h2>
+  <p class="section-subtitle">Mon parcours et ma philosophie d'accompagnement</p>
+  
+  <div class="block reverse">
+    <div class="block-text">
+      <div class="quote-frame">
+        <p>
+          "J'ai traversé des tempêtes qui m'ont conduite vers une force intérieure profonde. 
+          Les pratiques énergétiques m'ont permis de renaître, de comprendre mon être
+          et de transformer ma relation à moi-même."
+        </p>
+      </div>
+
+      <p>
+        Après m'être formée et certifiée en Reiki, Theta Healing et coaching,
+        j'accompagne aujourd'hui avec bienveillance celles et ceux
+        qui ressentent l'appel du changement.
+      </p>
+
+      <p>
+        Mon approche est humaine, intuitive et spirituelle :
+        chacun porte en lui les clés de sa transformation.
+      </p>
+      
+      <div class="experience-frame">
+        <div>5+</div>
+        <div>Années d'expérience</div>
+      </div>
+    </div>
+
+    <div class="portrait-frame floating">
+      <img src="portrait.png" alt="Portrait de la praticienne" onerror="this.onerror=null; this.src='https://placehold.co/600x600/9bc6a0/ffffff?text=Portrait+de+la+praticienne';">
+    </div>
+  </div>
+</section>
+
+<!-- TECHNIQUES -->
+<section id="techniques">
+  <h2 class="section-title">Les techniques proposées</h2>
+  <p class="section-subtitle">Des méthodes complémentaires pour votre bien-être</p>
+
+  <div class="prices">
+    <div class="card">
+      <div class="card-icon">🌿</div>
+      <h3>Reiki</h3>
+      <p>
+        Pratique japonaise qui aide le corps et l'esprit à retrouver détente,
+        équilibre et circulation harmonieuse de l'énergie. Idéal pour réduire
+        le stress et favoriser la guérison naturelle.
+      </p>
+      <small><i class="fas fa-clock"></i> Séance : 1h à 1h30</small>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🌙</div>
+      <h3>Theta Healing</h3>
+      <p>
+        Travail en profondeur sur les croyances inconscientes,
+        les blocages émotionnels et la libération intérieure
+        pour avancer plus aligné. Transformation durable des schémas limitants.
+      </p>
+      <small><i class="fas fa-clock"></i> Séance : 1h30</small>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">✨</div>
+      <h3>Coaching de vie</h3>
+      <p>
+        Clarifier, aligner, avancer — pour dépasser les obstacles
+        et reconnecter à votre plein potentiel. Accompagnement personnalisé
+        pour une transformation concrète.
+      </p>
+      <small><i class="fas fa-clock"></i> Séance : 1h</small>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULES -->
+<section id="formules">
+  <h2 class="section-title">Les formules</h2>
+  <p class="section-subtitle">Choisissez l'accompagnement qui vous correspond</p>
+
+  <div class="prices">
+    <div class="price-card">
+      <h3>Séances Individuelles</h3>
+      <p>Séances sur mesure en présentiel ou visio</p>
+      
+      <ul class="price-features">
+        <li>Visio ou présentiel</li>
+        <li>Outils adaptés à vos besoins</li>
+        <li>Suivi personnalisé</li>
+        <li>Support entre les séances</li>
+      </ul>
+      
+      <div class="price">95€ <span>/ séance</span></div>
+      
+      <a href="#contact" class="formula-cta">Réserver</a>
+    </div>
+
+    <div class="price-card">
+      <h3>Initiation Reiki</h3>
+      <p>1er degré - Certification</p>
+      
+      <ul class="price-features">
+        <li>1 journée complète (5-6h)</li>
+        <li>3 personnes maximum</li>
+        <li>Manuel et support fournis</li>
+        <li>Certification reconnue</li>
+        <li>Suivi post-initiation</li>
+      </ul>
+      
+      <div class="price">180€ <span>/ personne</span></div>
+      
+      <a href="#contact" class="formula-cta">S'inscrire</a>
+    </div>
+
+    <div class="price-card">
+      <h3>Ateliers & Groupes</h3>
+      <p>Découverte et pratiques collectives</p>
+      
+      <ul class="price-features">
+        <li>En groupe (max 8 personnes)</li>
+        <li>En individuel</li>
+        <li>En entreprise</li>
+        <li>Thématiques variées</li>
+      </ul>
+      
+      <div class="price">À venir</div>
+      
+      <a href="#contact" class="formula-cta">Me contacter</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT - FORMULAIRE FONCTIONNEL -->
+<section id="contact">
+  <h2 class="section-title">Contact</h2>
+  <p class="section-subtitle">Prenez contact pour toute question ou prise de rendez-vous</p>
+
+  <div class="contact-grid">
+    <div class="contact-item">
+      <div class="contact-emoji">📧</div>
+      <div>
+        <strong>Email</strong><br>
+        laet.jerome@gmail.com
+        <small>Réponse sous 24h</small>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <div class="contact-emoji">📍</div>
+      <div>
+        <strong>Localisation</strong><br>
+        Rouen
+        <small>Présentiel + visio selon disponibilités</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-form">
+    <h3>Formulaire de contact</h3>
+    
+    <form id="contactForm" action="https://formsubmit.co/laet.jerome@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nouveau message depuis le site Énergie & Transformation">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="#">
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Nom complet *</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="phone">Téléphone (optionnel)</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-group">
+          <label for="service">Service intéressé</label>
+          <select id="service" name="service">
+            <option value="">Sélectionnez une option</option>
+            <option value="reiki">Reiki</option>
+            <option value="theta">Theta Healing</option>
+            <option value="coaching">Coaching</option>
+            <option value="initiation">Initiation Reiki</option>
+            <option value="atelier">Atelier</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      
+      <div style="text-align: center;">
+        <button type="submit" class="cta" style="border: none; cursor: pointer;">Envoyer le message <i class="fas fa-paper-plane"></i></button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div>
+      <h4>Énergie & Transformation</h4>
+      <p>
+        Accompagnement énergétique et transformation intérieure 
+        pour retrouver apaisement, clarté et alignement.
+      </p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/lj_energetik_coach?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    
+    <div>
+      <h4>Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#qui">Qui suis-je</a></li>
+        <li><a href="#techniques">Techniques</a></li>
+        <li><a href="#formules">Formules</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4>Informations légales</h4>
+      <ul class="footer-links">
+        <li><a href="#" onclick="openLegalModal('mentions')">Mentions légales</a></li>
+        <li><a href="#" onclick="openLegalModal('confidentialite')">Politique de confidentialité</a></li>
+        <li><a href="#" onclick="openLegalModal('cgv')">CGV</a></li>
+        <li><a href="#" onclick="openLegalModal('cgu')">CGU</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="copyright">
+    © 2025 — Énergie & Transformation — Tous droits réservés | SIRET : 123 456 789 00000
+  </div>
+</footer>
+
+<!-- Modal pour les informations légales -->
+<div id="legalModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeLegalModal()">&times;</span>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<a href="#" class="back-to-top">
+  <i class="fas fa-chevron-up"></i>
+</a>
+
+<script>
+// Menu hamburger pour mobile
+const menuToggle = document.getElementById('menuToggle');
+const mainNav = document.getElementById('mainNav');
+const navLinks = mainNav.querySelectorAll('a');
+
+menuToggle.addEventListener('click', () => {
+  mainNav.classList.toggle('open');
+  menuToggle.innerHTML = mainNav.classList.contains('open') 
+    ? '<i class="fas fa-times"></i>' 
+    : '<i class="fas fa-bars"></i>';
+});
+
+// Fermer le menu au clic sur un lien
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mainNav.classList.remove('open');
+    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+  });
+});
+
+// Animation au scroll avec IntersectionObserver
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.1
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Animer les titres de section
+      const sectionTitle = entry.target.querySelector('.section-title');
+      const sectionSubtitle = entry.target.querySelector('.section-subtitle');
+      
+      if (sectionTitle && !sectionTitle.classList.contains('animated')) {
+        sectionTitle.classList.add('animated');
+      }
+      if (sectionSubtitle && !sectionSubtitle.classList.contains('animated')) {
+        sectionSubtitle.classList.add('animated');
+      }
+      
+      // Animer les éléments spécifiques selon la section
+      if (entry.target.id === 'qui') {
+        const portraitFrame = entry.target.querySelector('.portrait-frame');
+        const quoteFrame = entry.target.querySelector('.quote-frame');
+        const experienceFrame = entry.target.querySelector('.experience-frame');
+        const paragraphs = entry.target.querySelectorAll('.block-text p:not(.quote-frame p)');
+        
+        if (portraitFrame && !portraitFrame.classList.contains('animated')) {
+          portraitFrame.classList.add('animated');
+        }
+        if (quoteFrame && !quoteFrame.classList.contains('animated')) {
+          quoteFrame.classList.add('animated');
+        }
+        if (experienceFrame && !experienceFrame.classList.contains('animated')) {
+          experienceFrame.classList.add('animated');
+        }
+        
+        paragraphs.forEach((p, index) => {
+          if (!p.classList.contains('animated')) {
+            p.classList.add('animated');
+          }
+        });
+      }
+      
+      if (entry.target.id === 'techniques') {
+        const cards = entry.target.querySelectorAll('.card');
+        cards.forEach((card, index) => {
+          if (!card.classList.contains('animated')) {
+            setTimeout(() => {
+              card.classList.add('animated');
+            }, index * 100);
+          }
+        });
+      }
+      
+      if (entry.target.id === 'formules') {
+        const priceCards = entry.target.querySelectorAll('.price-card');
+        priceCards.forEach((card, index) => {
+          if (!card.classList.contains('animated')) {
+            setTimeout(() => {
+              card.classList.add('animated');
+            }, index * 100);
+          }
+        });
+      }
+      
+      if (entry.target.id === 'contact') {
+        const contactItems = entry.target.querySelectorAll('.contact-item');
+        const contactForm = entry.target.querySelector('.contact-form');
+        
+        contactItems.forEach((item, index) => {
+          if (!item.classList.contains('animated')) {
+            setTimeout(() => {
+              item.classList.add('animated');
+            }, index * 100);
+          }
+        });
+        
+        if (contactForm && !contactForm.classList.contains('animated')) {
+          setTimeout(() => {
+            contactForm.classList.add('animated');
+          }, 300);
+        }
+      }
+      
+      // Mettre à jour le lien actif dans la navigation
+      const currentId = entry.target.id;
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentId}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+  });
+}, observerOptions);
+
+// Observer toutes les sections
+document.querySelectorAll('section[id]').forEach(section => {
+  observer.observe(section);
+});
+
+// Gestion du formulaire
+const contactForm = document.getElementById("contactForm");
+const formLoader = document.getElementById("formLoader");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+    
+    // Afficher le loader
+    formLoader.classList.add('show');
+    
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+    submitBtn.disabled = true;
+    
+    // Simulation d'envoi (remplacer par l'appel réel à Formsubmit)
+    setTimeout(() => {
+      formLoader.classList.remove('show');
+      submitBtn.innerHTML = '<i class="fas fa-check"></i> Message envoyé !';
+      submitBtn.style.background = '#7aa87f';
+      
+      // Réinitialiser le formulaire après 2 secondes
+      setTimeout(() => {
+        contactForm.reset();
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        submitBtn.style.background = '';
+        
+        // Afficher un message de succès
+        alert('Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.');
+      }, 2000);
+      
+    }, 1500);
+  });
+}
+
+// Smooth scroll pour les ancres
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    const targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+    
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      // Calculer la position avec décalage pour le header
+      const headerHeight = document.querySelector('header').offsetHeight;
+      const targetPosition = targetElement.offsetTop - headerHeight - 20;
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+      
+      // Mettre à jour le lien actif
+      navLinks.forEach(link => link.classList.remove('active'));
+      this.classList.add('active');
+    }
+  });
+});
+
+// Back to top
+const backToTop = document.querySelector('.back-to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTop.classList.add('visible');
+  } else {
+    backToTop.classList.remove('visible');
+  }
+});
+
+backToTop.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Animation de frappe pour le titre principal
+const heroTitle = document.querySelector('.hero h1');
+if (heroTitle && window.innerWidth > 768) {
+  const text = heroTitle.textContent;
+  heroTitle.textContent = '';
+  
+  let i = 0;
+  function typeWriter() {
+    if (i < text.length) {
+      heroTitle.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 50);
+    }
+  }
+  
+  // Démarrer l'animation après un court délai
+  setTimeout(typeWriter, 500);
+}
+
+// Fonctions pour le modal des informations légales
+function openLegalModal(type) {
+  const modal = document.getElementById('legalModal');
+  const modalContent = document.getElementById('modalContent');
+  
+  let content = '';
+  let title = '';
+  
+  switch(type) {
+    case 'mentions':
+      title = 'Mentions légales';
+      content = `
+        <h3>${title}</h3>
+        <p><strong>Éditeur du site :</strong><br>
+        Énergie & Transformation<br>
+        SIRET : 123 456 789 00000<br>
+        Contact : laet.jerome@gmail.com</p>
+        
+        <p><strong>Propriété intellectuelle :</strong><br>
+        Tous les éléments de ce site sont protégés par le droit d'auteur.</p>
+        
+        <p><strong>Hébergement :</strong><br>
+        Le site est hébergé par [Nom de l'hébergeur].</p>
+      `;
+      break;
+      
+    case 'confidentialite':
+      title = 'Politique de confidentialité';
+      content = `
+        <h3>${title}</h3>
+        <p>Nous nous engageons à protéger vos données personnelles.</p>
+        
+        <p><strong>Données collectées :</strong><br>
+        - Nom et prénom<br>
+        - Adresse email<br>
+        - Téléphone (optionnel)<br>
+        - Informations de rendez-vous</p>
+        
+        <p><strong>Utilisation des données :</strong><br>
+        Vos données sont utilisées uniquement pour la gestion des rendez-vous et des communications relatives à nos services.</p>
+        
+        <p><strong>Conservation :</strong><br>
+        Vos données sont conservées pendant 3 ans après notre dernier contact.</p>
+        
+        <p><strong>Vos droits :</strong><br>
+        Vous avez le droit d'accéder, de rectifier ou de supprimer vos données en nous contactant.</p>
+      `;
+      break;
+      
+    case 'cgv':
+      title = 'Conditions Générales de Vente';
+      content = `
+        <h3>${title}</h3>
+        <p><strong>Article 1 - Prix :</strong><br>
+        Les prix sont indiqués en euros toutes taxes comprises.</p>
+        
+        <p><strong>Article 2 - Paiement :</strong><br>
+        Le paiement s'effectue au moment de la réservation par virement bancaire.</p>
+        
+        <p><strong>Article 3 - Annulation :</strong><br>
+        Toute annulation doit être effectuée au moins 48h à l'avance pour être remboursée.</p>
+        
+        <p><strong>Article 4 - Responsabilité :</strong><br>
+        Les séances ne se substituent pas à un suivi médical.</p>
+        
+        <p><strong>Article 5 - Confidentialité :</strong><br>
+        Toutes les séances sont confidentielles.</p>
+      `;
+      break;
+      
+    case 'cgu':
+      title = "Conditions Générales d'Utilisation";
+      content = `
+        <h3>${title}</h3>
+        <p><strong>Article 1 - Objet :</strong><br>
+        Les présentes CGU définissent les conditions d'utilisation du site.</p>
+        
+        <p><strong>Article 2 - Propriété intellectuelle :</strong><br>
+        Tous les éléments du site sont la propriété exclusive d'Énergie & Transformation.</p>
+        
+        <p><strong>Article 3 - Responsabilité :</strong><br>
+        L'utilisateur est responsable de l'utilisation qu'il fait du site.</p>
+        
+        <p><strong>Article 4 - Modification :</strong><br>
+        Nous nous réservons le droit de modifier ces CGU à tout moment.</p>
+        
+        <p><strong>Article 5 - Loi applicable :</strong><br>
+        Les présentes CGU sont régies par le droit français.</p>
+      `;
+      break;
+  }
+  
+  modalContent.innerHTML = content;
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLegalModal() {
+  document.getElementById('legalModal').style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
+// Fermer le modal en cliquant en dehors
+window.onclick = function(event) {
+  const modal = document.getElementById('legalModal');
+  if (event.target == modal) {
+    closeLegalModal();
+  }
+}
+
+// Fermer le modal avec la touche ESC
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closeLegalModal();
+  }
+});
+
+// Optimisation pour mobile
+document.addEventListener('DOMContentLoaded', function() {
+  // Détecter les appareils tactiles
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  
+  if (isTouchDevice) {
+    document.body.classList.add('touch-device');
+  }
+  
+  // Prévenir le zoom sur les inputs iOS
+  const inputs = document.querySelectorAll('input, textarea, select');
+  inputs.forEach(input => {
+    input.addEventListener('focus', function() {
+      // Scroll doux vers l'input
+      setTimeout(() => {
+        this.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 300);
+    });
+  });
+  
+  // Animer la section hero immédiatement
+  const heroElements = document.querySelectorAll('.hero h1, .hero p, .hero-buttons');
+  heroElements.forEach((el, index) => {
+    el.style.animationDelay = `${index * 0.3}s`;
+  });
+});
+</script>
+
+</body>
+</html>
