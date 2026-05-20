@@ -961,6 +961,255 @@ section{
   }
 }
 
+/* COACHING AVANT EXAMEN */
+.exam-coach {
+  background: linear-gradient(180deg, rgba(232,245,232,0.6), rgba(232,245,232,0));
+  border: 1px solid rgba(155, 198, 160, 0.25);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.exam-coach.animated { 
+  animation: fadeInUp 0.8s ease-out forwards; 
+}
+
+.exam-coach::after {
+  content: '';
+  position: absolute;
+  inset: -40% -10% auto auto;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(155,198,160,0.18), transparent 70%);
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.exam-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.exam-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--green), var(--green-dark));
+  color: #fff;
+  font-size: 1.2rem;
+  box-shadow: 0 8px 20px rgba(155,198,160,0.35);
+}
+
+.exam-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--text);
+  letter-spacing: .2px;
+}
+
+.exam-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+@media (min-width: 900px) {
+  .exam-grid { 
+    grid-template-columns: 1.1fr .9fr;
+    gap: 28px;
+  }
+}
+
+.exam-card {
+  background: #fff;
+  border: 1px solid rgba(155,198,160,0.2);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.exam-sub {
+  color: var(--text-light);
+  margin-top: 6px;
+  margin-bottom: 10px;
+  font-size: .98rem;
+}
+
+.exam-list {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+.exam-list li {
+  position: relative;
+  padding-left: 30px;
+  margin: 10px 0;
+  color: var(--text);
+}
+
+.exam-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--green);
+  font-weight: 700;
+  transform: translateY(1px);
+  transition: var(--transition);
+}
+
+.exam-list li:hover {
+  color: var(--green-dark);
+  transform: translateX(4px);
+}
+
+.exam-list li:hover::before {
+  transform: translateY(1px) scale(1.1);
+}
+
+.exam-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.exam-tag {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: .85rem;
+  color: var(--green-dark);
+  background: rgba(155,198,160,0.12);
+  border: 1px solid rgba(155,198,160,0.25);
+}
+
+.exam-prices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.exam-price {
+  background: linear-gradient(180deg, #fff, #f8fbf7);
+  border: 1px solid rgba(155,198,160,0.25);
+  border-radius: 14px;
+  padding: 14px;
+  text-align: center;
+}
+
+.exam-amount {
+  font-weight: 800;
+  color: var(--green-dark);
+  font-size: 1.4rem;
+}
+
+.exam-legend {
+  color: var(--text-light);
+  font-size: .9rem;
+}
+
+.exam-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.exam-note {
+  color: var(--text-light);
+  font-size: .9rem;
+  margin-top: 12px;
+}
+
+.exam-aside {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ffffff, #f4faf3);
+  border: 1px solid rgba(155,198,160,0.2);
+  padding: 18px;
+}
+
+.exam-illu {
+  width: 100%;
+  aspect-ratio: 16/10;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #9bc6a0, #7aa87f);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+}
+
+.exam-quote {
+  margin-top: 14px;
+  font-style: italic;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.exam-stagger > * {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.exam-stagger.show > * {
+  animation: fadeInUp .7s ease forwards;
+}
+
+.exam-stagger.show > :nth-child(2) { animation-delay: .08s; }
+.exam-stagger.show > :nth-child(3) { animation-delay: .16s; }
+.exam-stagger.show > :nth-child(4) { animation-delay: .24s; }
+.exam-stagger.show > :nth-child(5) { animation-delay: .32s; }
+
+.cta-mini {
+  background: white;
+  color: var(--green-dark);
+  border: 2px solid var(--green);
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 600;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cta-mini:hover {
+  background: rgba(155,198,160,0.08);
+  transform: translateY(-2px);
+}
+
+#examModal .modal-content {
+  max-width: 520px;
+}
+
+.exam-inline-form .form-row {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .exam-inline-form .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 /* CONTACT */
 .contact-grid{
   display: grid;
@@ -1467,7 +1716,6 @@ footer{
     transform: translateY(-2px);
   }
   
-  /* Empêcher le zoom sur les inputs iOS */
   input[type="text"],
   input[type="email"],
   input[type="tel"],
@@ -1548,6 +1796,7 @@ footer{
       <a href="#accueil" class="active">Accueil</a>
       <a href="#qui">Qui suis-je</a>
       <a href="#techniques">Techniques</a>
+      <a href="#exam-coaching">Examen</a>
       <a href="#formules">Formules</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -1585,16 +1834,16 @@ footer{
     <div class="block-text">
       <div class="quote-frame">
         <p>
-          J’ai affronté des tempêtes qui auraient pu m'éteindre complètement. Chaque épreuve m’a guidée sur le chemin d'une immense force intérieure. La compréhension de mon être et de mon énergie, m'ont montré la voie pour renaître pleinement.
+          J'ai affronté des tempêtes qui auraient pu m'éteindre complètement. Chaque épreuve m'a guidée sur le chemin d'une immense force intérieure. La compréhension de mon être et de mon énergie, m'ont montré la voie pour renaître pleinement.
         </p>
       </div>
 
       <p>
-        C’est en cheminant à travers ces expériences que j’ai découvert le Reiki, le Theta Healing et le coaching de vie. Après en avoir moi-même bénéficié, j’ai choisi de me former, et de me certifier afin d'accompagner les autres sur leur propre chemin de transformation.
+        C'est en cheminant à travers ces expériences que j'ai découvert le Reiki, le Theta Healing et le coaching de vie. Après en avoir moi-même bénéficié, j'ai choisi de me former, et de me certifier afin d'accompagner les autres sur leur propre chemin de transformation.
       </p>
 
       <p>
-        Aujourd’hui, je mets cette expérience personnelle et ces outils au service de celles et ceux qui ressentent l’appel du changement. J’accompagne avec bienveillance, intuition et authenticité les personnes prêtes à se libérer de ce qui les freine, à retrouver leur pouvoir intérieur et à avancer vers une vie plus alignée.
+        Aujourd'hui, je mets cette expérience personnelle et ces outils au service de celles et ceux qui ressentent l'appel du changement. J'accompagne avec bienveillance, intuition et authenticité les personnes prêtes à se libérer de ce qui les freine, à retrouver leur pouvoir intérieur et à avancer vers une vie plus alignée.
       </p>
 
       <p>
@@ -1650,6 +1899,70 @@ footer{
         pour une transformation concrète.
       </p>
       <small><i class="fas fa-clock"></i> Séance : 1h</small>
+    </div>
+  </div>
+</section>
+
+<!-- COACHING AVANT EXAMEN -->
+<section id="exam-coaching">
+  <h2 class="section-title">Coaching avant examen</h2>
+  <p class="section-subtitle">Bac, permis, entretien… gestion du stress, clarté et confiance au moment clé</p>
+
+  <div class="exam-coach" id="examCoachBlock">
+    <div class="exam-head">
+      <div class="exam-badge">🎯</div>
+      <div class="exam-title">Prêt(e) pour le jour J</div>
+    </div>
+
+    <div class="exam-grid">
+      <!-- Colonne gauche -->
+      <div class="exam-stagger">
+        <div class="exam-card">
+          <p class="exam-sub">Un accompagnement court, efficace et ciblé</p>
+          <ul class="exam-list">
+            <li>Visio de préférence (présentiel possible)</li>
+            <li>Outils adaptés à tes besoins</li>
+            <li>Suivi personnalisé</li>
+            <li>1 à 2 séances avant l'événement</li>
+          </ul>
+
+          <div class="exam-tags">
+            <span class="exam-tag">Bac</span>
+            <span class="exam-tag">Permis</span>
+            <span class="exam-tag">Entretien</span>
+            <span class="exam-tag">Concours</span>
+          </div>
+
+          <div class="exam-prices">
+            <div class="exam-price">
+              <div class="exam-amount">45€</div>
+              <div class="exam-legend">La séance (45–50 min)</div>
+            </div>
+            <div class="exam-price">
+              <div class="exam-amount">80€</div>
+              <div class="exam-legend">Pack 2 séances</div>
+            </div>
+          </div>
+
+          <div class="exam-cta-row">
+            <a href="#contact" class="cta">Réserver maintenant</a>
+            <button type="button" class="cta-mini" onclick="openExamModal()">
+              Planifier 2 séances
+              <i class="fas fa-calendar-check"></i>
+            </button>
+          </div>
+
+          <p class="exam-note">Conseil : bloque une séance 7–10 jours avant et une 24–48h avant l'examen.</p>
+        </div>
+      </div>
+
+      <!-- Colonne droite -->
+      <aside class="exam-aside exam-stagger">
+        <div class="exam-illu">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <p class="exam-quote">"Respirer, ancrer, visualiser — ton corps sait, ton esprit suit."</p>
+      </aside>
     </div>
   </div>
 </section>
@@ -1770,6 +2083,7 @@ footer{
             <option value="coaching">Coaching</option>
             <option value="initiation">Initiation Reiki</option>
             <option value="atelier">Atelier</option>
+            <option value="exam">Coaching examen</option>
             <option value="autre">Autre</option>
           </select>
         </div>
@@ -1806,6 +2120,7 @@ footer{
         <li><a href="#accueil">Accueil</a></li>
         <li><a href="#qui">Qui suis-je</a></li>
         <li><a href="#techniques">Techniques</a></li>
+        <li><a href="#exam-coaching">Coaching examen</a></li>
         <li><a href="#formules">Formules</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -1832,6 +2147,57 @@ footer{
   <div class="modal-content">
     <span class="close-modal" onclick="closeLegalModal()">&times;</span>
     <div id="modalContent"></div>
+  </div>
+</div>
+
+<!-- Modal dédié au coaching examen -->
+<div id="examModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeExamModal()">&times;</span>
+    <h3>Planifier le pack 2 séances</h3>
+    <p class="section-subtitle" style="margin:0 0 16px;">Indique tes disponibilités, je confirme sous 24h.</p>
+
+    <form class="exam-inline-form" id="examPackForm" action="https://formsubmit.co/laet.jerome@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Pack 2 séances — Coaching Examen">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="ex-name">Nom complet *</label>
+          <input id="ex-name" name="name" type="text" required>
+        </div>
+        <div class="form-group">
+          <label for="ex-email">Email *</label>
+          <input id="ex-email" name="email" type="email" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="ex-type">Type d'examen *</label>
+          <select id="ex-type" name="type" required>
+            <option value="">Sélectionnez</option>
+            <option>Bac</option>
+            <option>Permis</option>
+            <option>Entretien</option>
+            <option>Concours</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="ex-mode">Mode *</label>
+          <select id="ex-mode" name="mode" required>
+            <option value="">Sélectionnez</option>
+            <option>Visio</option>
+            <option>Présentiel</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="ex-slots">Tes disponibilités (2 créneaux) *</label>
+        <textarea id="ex-slots" name="disponibilites" rows="4" placeholder="Ex: mar 18h-19h, jeu 12h-13h" required></textarea>
+      </div>
+      <button type="submit" class="cta" style="border:none;cursor:pointer;">Envoyer la demande</button>
+    </form>
   </div>
 </div>
 
@@ -1916,6 +2282,21 @@ const observer = new IntersectionObserver((entries) => {
         });
       }
       
+      if (entry.target.id === 'exam-coaching') {
+        const examCoach = entry.target.querySelector('.exam-coach');
+        const staggerElements = entry.target.querySelectorAll('.exam-stagger');
+        
+        if (examCoach && !examCoach.classList.contains('animated')) {
+          examCoach.classList.add('animated');
+        }
+        
+        staggerElements.forEach(el => {
+          if (!el.classList.contains('show')) {
+            el.classList.add('show');
+          }
+        });
+      }
+      
       if (entry.target.id === 'formules') {
         const priceCards = entry.target.querySelectorAll('.price-card');
         priceCards.forEach((card, index) => {
@@ -1963,7 +2344,7 @@ document.querySelectorAll('section[id]').forEach(section => {
   observer.observe(section);
 });
 
-// Gestion du formulaire
+// Gestion du formulaire principal
 const contactForm = document.getElementById("contactForm");
 const formLoader = document.getElementById("formLoader");
 
@@ -1971,7 +2352,6 @@ if (contactForm) {
   contactForm.addEventListener("submit", function(e) {
     e.preventDefault();
     
-    // Afficher le loader
     formLoader.classList.add('show');
     
     const submitBtn = contactForm.querySelector('button[type="submit"]');
@@ -1980,20 +2360,16 @@ if (contactForm) {
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
     submitBtn.disabled = true;
     
-    // Simulation d'envoi (remplacer par l'appel réel à Formsubmit)
     setTimeout(() => {
       formLoader.classList.remove('show');
       submitBtn.innerHTML = '<i class="fas fa-check"></i> Message envoyé !';
       submitBtn.style.background = '#7aa87f';
       
-      // Réinitialiser le formulaire après 2 secondes
       setTimeout(() => {
         contactForm.reset();
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
         submitBtn.style.background = '';
-        
-        // Afficher un message de succès
         alert('Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.');
       }, 2000);
       
@@ -2011,7 +2387,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
-      // Calculer la position avec décalage pour le header
       const headerHeight = document.querySelector('header').offsetHeight;
       const targetPosition = targetElement.offsetTop - headerHeight - 20;
       
@@ -2020,7 +2395,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         behavior: 'smooth'
       });
       
-      // Mettre à jour le lien actif
       navLinks.forEach(link => link.classList.remove('active'));
       this.classList.add('active');
     }
@@ -2061,7 +2435,6 @@ if (heroTitle && window.innerWidth > 768) {
     }
   }
   
-  // Démarrer l'animation après un court délai
   setTimeout(typeWriter, 500);
 }
 
@@ -2087,7 +2460,7 @@ function openLegalModal(type) {
         Tous les éléments de ce site sont protégés par le droit d'auteur.</p>
         
         <p><strong>Hébergement :</strong><br>
-        Le site est hébergé par [Nom de l'hébergeur].</p>
+        Le site est hébergé par github .</p>
       `;
       break;
       
@@ -2167,42 +2540,74 @@ function closeLegalModal() {
   document.body.style.overflow = 'auto';
 }
 
-// Fermer le modal en cliquant en dehors
-window.onclick = function(event) {
-  const modal = document.getElementById('legalModal');
-  if (event.target == modal) {
-    closeLegalModal();
-  }
+// Fonctions pour le modal coaching examen
+function openExamModal() {
+  const m = document.getElementById('examModal');
+  m.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
 }
+
+function closeExamModal() {
+  document.getElementById('examModal').style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
+// Fermer le modal si clic hors cadre
+window.addEventListener('click', (e) => {
+  const m = document.getElementById('examModal');
+  if (m && e.target === m) closeExamModal();
+});
 
 // Fermer le modal avec la touche ESC
 document.addEventListener('keydown', function(event) {
   if (event.key === 'Escape') {
     closeLegalModal();
+    closeExamModal();
   }
 });
 
+// Soumission formulaire pack 2 séances
+const examPackForm = document.getElementById('examPackForm');
+if (examPackForm) {
+  examPackForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = examPackForm.querySelector('button[type="submit"]');
+    const txt = btn.innerHTML;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.innerHTML = '<i class="fas fa-check"></i> Demande envoyée';
+      btn.style.background = '#7aa87f';
+      setTimeout(() => {
+        examPackForm.reset();
+        btn.innerHTML = txt;
+        btn.disabled = false;
+        btn.style.background = '';
+        alert('Merci ! Je te reviens rapidement pour confirmer les deux séances.');
+        closeExamModal();
+      }, 1500);
+    }, 1200);
+  });
+}
+
 // Optimisation pour mobile
 document.addEventListener('DOMContentLoaded', function() {
-  // Détecter les appareils tactiles
   const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
   
   if (isTouchDevice) {
     document.body.classList.add('touch-device');
   }
   
-  // Prévenir le zoom sur les inputs iOS
   const inputs = document.querySelectorAll('input, textarea, select');
   inputs.forEach(input => {
     input.addEventListener('focus', function() {
-      // Scroll doux vers l'input
       setTimeout(() => {
         this.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }, 300);
     });
   });
   
-  // Animer la section hero immédiatement
   const heroElements = document.querySelectorAll('.hero h1, .hero p, .hero-buttons');
   heroElements.forEach((el, index) => {
     el.style.animationDelay = `${index * 0.3}s`;
